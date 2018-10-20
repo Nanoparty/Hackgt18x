@@ -15,11 +15,10 @@
         android:layout_width="match_parent"
         android:layout_height="92dp"
         android:layout_marginStart="0dp"
-        android:layout_marginTop="1dp"
-        android:src="@drawable/transback"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="0dp"
+        android:src="@drawable/transback"/>
     <ImageView
         android:id="@+id/slogan"
         android:layout_width="337dp"
