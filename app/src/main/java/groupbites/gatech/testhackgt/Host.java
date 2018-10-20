@@ -1,5 +1,6 @@
 package groupbites.gatech.testhackgt;
 
+import java.sql.Time;
 import java.util.ArrayList;
 
 /**
@@ -8,16 +9,26 @@ import java.util.ArrayList;
 
 public class Host {
     static ArrayList<Host> hostList = new ArrayList<>();
-    private String Location;
-    private String Name;
-    private String Cuisine;
+    private String Location; //ADDRESS
+    private String Name;   //NAME OF EVENT
+    private String Cuisine; //TYPE
     private String Description;
+    private int MaxGuests;
+    private int Price;
+    private double lattitute;
+    private double longitude;
+    private Time EventTime;
 
-    public Host(String a, String b, String c, String d){
-        Location = a;
-        Name = b;
-        Cuisine = c;
-        Description = d;
+    public Host(String loc, String name, String cuis, String desc, int mg, int price, double lat, double lon, Time time){
+        Location = loc;
+        Name = name;
+        Cuisine = cuis;
+        Description = desc;
+        MaxGuests = mg;
+        Price = price;
+        lattitute = lat;
+        longitude = lon;
+        EventTime = time;
     }
 
     public Host(){
@@ -36,6 +47,21 @@ public class Host {
     public String getDescription(){
         return Description;
     }
+    public int getMaxGuests(){
+        return MaxGuests;
+    }
+    public int getPrice(){
+        return Price;
+    }
+    public double getLattitute(){
+        return lattitute;
+    }
+    public double getLongitude(){
+        return longitude;
+    }
+    public Time getEventTime(){
+        return EventTime;
+    }
 
     public void setName(String i){
         Name = i;
@@ -48,6 +74,21 @@ public class Host {
     }
     public void setCuisine(String i){
         Cuisine = i;
+    }
+    public void setMaxGuests(int i){
+        MaxGuests = i;
+    }
+    public void setPrice(int i){
+        Price = i;
+    }
+    public void setLattitute(double d){
+        lattitute = d;
+    }
+    public void setLongitude(double d){
+        longitude = d;
+    }
+    public void setEventTime(Time t){
+        EventTime = t;
     }
 
 
