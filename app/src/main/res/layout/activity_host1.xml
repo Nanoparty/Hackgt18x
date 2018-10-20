@@ -7,7 +7,7 @@
     tools:context=".HostActivity1">
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/titleHost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -17,7 +17,7 @@
         android:ems="10"
         android:hint="Title"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/editText2"
+        app:layout_constraintBottom_toTopOf="@+id/categoryHost"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.588"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,22 +25,17 @@
         app:layout_constraintVertical_bias="0.766" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/categoryHost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="40dp"
         android:ems="10"
         android:hint="Category"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/editText5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.588"
-        app:layout_constraintStart_toStartOf="parent" />
+        tools:layout_editor_absoluteX="98dp"
+        tools:layout_editor_absoluteY="112dp" />
 
     <EditText
-        android:id="@+id/editText5"
+        android:id="@+id/descriptionHost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -63,6 +58,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:text="Next"
+<<<<<<< HEAD
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.939"
@@ -85,5 +81,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.923" />
+=======
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="447dp" />
+>>>>>>> e4fd6372b139ee2807c4a09be882e2ec71c37cce
 
 </android.support.constraint.ConstraintLayout>
