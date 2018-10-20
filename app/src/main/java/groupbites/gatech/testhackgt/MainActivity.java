@@ -19,14 +19,14 @@ public class MainActivity extends AppCompatActivity {
     TextView text;
 
     private Button guestButton;
-
+    private Button hostButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        text = (TextView) findViewById(R.id.text);
+//        text = (TextView) findViewById(R.id.text);
 
 
         // Write a message to the database
@@ -36,25 +36,44 @@ public class MainActivity extends AppCompatActivity {
 
 
         //databaseHosts.child(id).setValue(testhost);
+//
+//        guestButton = (Button) findViewById(R.id.guest_button);
+//        guestButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//                DatabaseReference mDatabase;
+//                mDatabase = FirebaseDatabase.getInstance().getReference("path");
+//                String id = mDatabase.push().getKey();
+//                Host artist = new Host("loc", "name", "cusine","desc");
+//                mDatabase.child(id).setValue(artist);
+//
+//                Intent intent = new Intent(getApplicationContext(), GuestActivity.class);
+//                startActivity(intent);
+//            }
+//        });
+//
 
+        //Two methods below are to hide preset navigation bar/action bar/status bar
         guestButton = (Button) findViewById(R.id.guest_button);
         guestButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                DatabaseReference mDatabase;
-                mDatabase = FirebaseDatabase.getInstance().getReference("path");
-                String id = mDatabase.push().getKey();
-                Host artist = new Host("loc", "name", "cusine","desc");
-                mDatabase.child(id).setValue(artist);
-
                 Intent intent = new Intent(getApplicationContext(), GuestActivity.class);
+                startActivity(intent);
+            }
+        });
+        hostButton = (Button) findViewById(R.id.host_button);
+        hostButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), HostActivity1.class);
                 startActivity(intent);
             }
         });
 
 
-        //Two methods below are to hide preset navigation bar/action bar/status bar
+
         getSupportActionBar().hide();
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
 
