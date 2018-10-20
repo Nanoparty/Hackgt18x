@@ -10,18 +10,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".HostActivity2"
-        tools:layout_editor_absoluteX="41dp"
-        tools:layout_editor_absoluteY="0dp">
-
-        <SeekBar
-            android:id="@+id/seekBar2"
-            style="@style/Widget.AppCompat.SeekBar.Discrete"
-            android:layout_width="155dp"
-            android:layout_height="29dp"
-            android:max="10"
-            android:progress="3"
-            tools:layout_editor_absoluteX="116dp"
-            tools:layout_editor_absoluteY="166dp" />
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="36dp">
 
         <TextView
             android:id="@+id/textView3"
@@ -115,16 +105,21 @@
             android:id="@+id/button8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
             android:text="Back"
-            tools:layout_editor_absoluteX="51dp"
+            app:layout_constraintStart_toStartOf="parent"
             tools:layout_editor_absoluteY="425dp" />
 
         <Button
             android:id="@+id/button9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
             android:text="Next"
-            tools:layout_editor_absoluteX="271dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.711"
+            app:layout_constraintStart_toEndOf="@+id/button8"
             tools:layout_editor_absoluteY="425dp" />
 
         <EditText
@@ -143,10 +138,10 @@
             app:layout_constraintStart_toStartOf="parent" />
 
         <SeekBar
-            android:id="@+id/seekBar4"
+            android:id="@+id/seekBar2"
             style="@style/Widget.AppCompat.SeekBar.Discrete"
-            android:layout_width="144dp"
-            android:layout_height="32dp"
+            android:layout_width="155dp"
+            android:layout_height="38dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
