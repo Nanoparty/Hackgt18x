@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Write a message to the database
         databaseHosts = FirebaseDatabase.getInstance().getReference("path");
+
         databaseHosts.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
