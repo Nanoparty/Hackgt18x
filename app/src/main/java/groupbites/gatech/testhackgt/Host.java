@@ -1,10 +1,13 @@
 package groupbites.gatech.testhackgt;
 
+import java.util.ArrayList;
+
 /**
  * Created by nfoot on 10/20/2018.
  */
 
 public class Host {
+    static ArrayList<Host> hostList;
     private String Location;
     private String Name;
     private String Cuisine;
@@ -17,7 +20,11 @@ public class Host {
         Description = d;
     }
 
-    public String getLoc(){
+    public Host(){
+
+    }
+
+    public String getLocation(){
         return Location;
     }
     public String getName(){
@@ -26,8 +33,21 @@ public class Host {
     public String getCuisine(){
         return Cuisine;
     }
-    public String getDesc(){
+    public String getDescription(){
         return Description;
+    }
+
+    public void setName(String i){
+        Name = i;
+    }
+    public void setDescription(String i){
+        Description = i;
+    }
+    public void setLocation(String i){
+        Location = i;
+    }
+    public void setCuisine(String i){
+        Cuisine = i;
     }
 
 

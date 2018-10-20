@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Button guestButton;
     private Button hostButton;
+    DatabaseReference databaseHosts;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +31,30 @@ public class MainActivity extends AppCompatActivity {
 
 
         // Write a message to the database
-        //databaseHosts = FirebaseDatabase.getInstance().getReference("hosts");
+        databaseHosts = FirebaseDatabase.getInstance().getReference("path");
+        databaseHosts.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+
+                //clearing the previous artist list
+                Host.hostList.clear();
+
+                //iterating through all the nodes
+                for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
+                    //getting artist
+                    Host host = postSnapshot.getValue(Host.class);
+                    //adding artist to the list
+                    Host.hostList.add(host);
+
+                }
+            }
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+
+
         //String id = databaseHosts.push().getKey();
         //Host testhost = new Host("locaiton","name","cusine","descirption");
 
