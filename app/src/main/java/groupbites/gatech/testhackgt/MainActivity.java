@@ -17,7 +17,7 @@ import com.google.firebase.database.ValueEventListener;
 public class MainActivity extends AppCompatActivity {
 
     TextView text;
-    DatabaseReference databaseHosts;
+
     private Button guestButton;
 
 
@@ -28,39 +28,32 @@ public class MainActivity extends AppCompatActivity {
 
         text = (TextView) findViewById(R.id.text);
 
+
         // Write a message to the database
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("message2");
+        //databaseHosts = FirebaseDatabase.getInstance().getReference("hosts");
+        //String id = databaseHosts.push().getKey();
+        //Host testhost = new Host("locaiton","name","cusine","descirption");
 
-        myRef.setValue("I love milk!");
 
-        databaseHosts = FirebaseDatabase.getInstance().getReference("hosts");
+        //databaseHosts.child(id).setValue(testhost);
+
         guestButton = (Button) findViewById(R.id.guest_button);
         guestButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                DatabaseReference mDatabase;
+                mDatabase = FirebaseDatabase.getInstance().getReference("path");
+                String id = mDatabase.push().getKey();
+                Host artist = new Host("loc", "name", "cusine","desc");
+                mDatabase.child(id).setValue(artist);
+
                 Intent intent = new Intent(getApplicationContext(), GuestActivity.class);
                 startActivity(intent);
             }
         });
 
-        // Read from the database
-        myRef.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                // This method is called once with the initial value and again
-                // whenever data at this location is updated.
-                String value = dataSnapshot.getValue(String.class);
-                //Log.d(TAG, "Value is: " + value);
-                text.setText(value);
-            }
 
-            @Override
-            public void onCancelled(DatabaseError error) {
-                // Failed to read value
-                //Log.w(TAG, "Failed to read value.", error.toException());
-            }
-        });
         //Two methods below are to hide preset navigation bar/action bar/status bar
         getSupportActionBar().hide();
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
