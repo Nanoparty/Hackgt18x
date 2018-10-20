@@ -2,4 +2,11 @@
     <string name="app_name">TestHackGT</string>
     <string name="title_activity_host3">HostActivity3</string>
     <string name="textview">TextView</string>
+    <string name="hostone_cont">Button</string>
+    <string name="dish_name">dish_name</string>
+    <string name="Name">Name</string>
+    <string name="name">Name</string>
+    <string name="hostactname" />
+    <string name="event_name">event_name</string>
+    <string name="description">Description</string>
 </resources>
