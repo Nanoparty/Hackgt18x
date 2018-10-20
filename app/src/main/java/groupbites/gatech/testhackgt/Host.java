@@ -7,7 +7,7 @@ import java.util.ArrayList;
  */
 
 public class Host {
-    static ArrayList<Host> hostList;
+    static ArrayList<Host> hostList = new ArrayList<>();
     private String Location;
     private String Name;
     private String Cuisine;
