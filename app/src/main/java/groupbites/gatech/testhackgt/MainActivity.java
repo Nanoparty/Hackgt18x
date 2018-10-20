@@ -3,6 +3,7 @@ package groupbites.gatech.testhackgt;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -12,16 +13,23 @@ import com.google.firebase.database.ValueEventListener;
 
 public class MainActivity extends AppCompatActivity {
 
+    TextView text;
+    DatabaseReference databaseHosts;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        text = (TextView) findViewById(R.id.text);
+
         // Write a message to the database
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("message");
+        DatabaseReference myRef = database.getReference("message2");
 
-        myRef.setValue("Hello, World!");
+        myRef.setValue("I love milk!");
+
+        databaseHosts = FirebaseDatabase.getInstance().getReference("hosts");
 
 
         // Read from the database
@@ -32,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
                 // whenever data at this location is updated.
                 String value = dataSnapshot.getValue(String.class);
                 //Log.d(TAG, "Value is: " + value);
+                text.setText(value);
             }
 
             @Override
