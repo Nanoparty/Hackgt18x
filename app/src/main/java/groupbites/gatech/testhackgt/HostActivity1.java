@@ -1,5 +1,10 @@
 package groupbites.gatech.testhackgt;
 
+
+import android.content.Intent;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -12,6 +17,14 @@ public class HostActivity1 extends AppCompatActivity {
     //this is for the Host's description of food
     Button butt;
     TextView dish;
+
+    Location location; // Location
+    double latitude; // Latitude
+    double longitude; // Longitude
+
+    // Declaring a Location Manager
+    protected LocationManager locationManager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +37,12 @@ public class HostActivity1 extends AppCompatActivity {
                 Log.i(dish.getText().toString(), dish.getText().toString());
             }
         });
+
+        location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+        if (location != null) {
+            latitude = location.getLatitude();
+            longitude = location.getLongitude();
+        }
     }
 
 }
