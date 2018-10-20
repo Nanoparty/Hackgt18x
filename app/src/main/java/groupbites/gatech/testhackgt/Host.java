@@ -17,5 +17,18 @@ public class Host {
         Description = d;
     }
 
+    public String getLoc(){
+        return Location;
+    }
+    public String getName(){
+        return Name;
+    }
+    public String getCuisine(){
+        return Cuisine;
+    }
+    public String getDesc(){
+        return Description;
+    }
+
 
 }
