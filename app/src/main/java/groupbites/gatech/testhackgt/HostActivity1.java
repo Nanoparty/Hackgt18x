@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.SeekBar;
 import android.widget.TextView;
 
 public class HostActivity1 extends AppCompatActivity {
@@ -17,6 +18,11 @@ public class HostActivity1 extends AppCompatActivity {
     //this is for the Host's description of food
     Button butt;
     TextView dish;
+    TextView name;
+    TextView catagory;
+    SeekBar price;
+    SeekBar people;
+
 
     Location location; // Location
     double latitude; // Latitude
@@ -38,11 +44,11 @@ public class HostActivity1 extends AppCompatActivity {
             }
         });
 
-        location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
-        if (location != null) {
-            latitude = location.getLatitude();
-            longitude = location.getLongitude();
-        }
+//        location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+//        if (location != null) {
+//            latitude = location.getLatitude();
+//            longitude = location.getLongitude();
+//        }
     }
 
 }
