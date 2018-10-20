@@ -17,7 +17,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="0dp"
-        android:layout_marginTop="1dp"
+        android:layout_marginTop="0dp"
         android:src="@drawable/transback" />
 
     <ImageView
@@ -34,7 +34,7 @@
         android:id="@+id/guest_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_alignTop="@+id/logo"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="343dp"
         android:text="Guest" />
