@@ -18,7 +18,11 @@
         </activity>
         <activity android:name=".GuestActivity" />
         <activity android:name=".HostActivity1" />
-        <activity android:name=".HostActivity2"></activity>
+        <activity android:name=".HostActivity2" />
+        <activity
+            android:name=".HostActivity3"
+            android:label="@string/title_activity_host3"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
