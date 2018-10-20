@@ -9,6 +9,7 @@ import android.widget.Button;
 
 public class HostActivity1 extends AppCompatActivity {
     private Button nextButton;
+    private Button backButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,6 +21,12 @@ public class HostActivity1 extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), HostActivity2.class);
                 startActivity(intent);
             }
+            backButton = (Button) findViewById(R.id.descriptionBackHost);
+        backButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                    startActivity(intent);
         });
     }
 }
