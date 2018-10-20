@@ -22,7 +22,7 @@
         <activity
             android:name=".HostActivity3"
             android:label="@string/title_activity_host3"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>
