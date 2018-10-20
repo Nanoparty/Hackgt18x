@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">TestHackGT</string>
+    <string name="title_activity_host3">HostActivity3</string>
 </resources>
