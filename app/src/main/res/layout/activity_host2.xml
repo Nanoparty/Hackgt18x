@@ -10,8 +10,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".HostActivity2"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="133dp">
+        tools:layout_editor_absoluteX="41dp"
+        tools:layout_editor_absoluteY="0dp">
 
         <SeekBar
             android:id="@+id/seekBar2"
@@ -131,12 +131,16 @@
             android:id="@+id/editText7"
             android:layout_width="282dp"
             android:layout_height="102dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="96dp"
             android:ems="10"
             android:hint="Additional Rules"
             android:inputType="textPersonName"
             android:textSize="30sp"
-            tools:layout_editor_absoluteX="48dp"
-            tools:layout_editor_absoluteY="308dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <SeekBar
             android:id="@+id/seekBar4"
