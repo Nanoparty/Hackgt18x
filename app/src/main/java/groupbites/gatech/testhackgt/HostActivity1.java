@@ -20,13 +20,12 @@ public class HostActivity1 extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), HostActivity2.class);
                 startActivity(intent);
-            }
+            }}
             backButton = (Button) findViewById(R.id.descriptionBackHost);
-            backButton.setOnClickListener(new View.OnClickListener() {
+        backButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                     startActivity(intent);
-        });
     }
 }
