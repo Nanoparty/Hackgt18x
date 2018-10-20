@@ -16,7 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".GuestActivity"></activity>
+        <activity android:name=".GuestActivity" />
+        <activity android:name=".HostActivity1"></activity>
     </application>
 
 </manifest>
