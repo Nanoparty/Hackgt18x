@@ -67,16 +67,12 @@ public class HostActivity1 extends AppCompatActivity {
                 Host h = new Host(address.getText().toString(),name.getText().toString(),catagory.getText().toString(),descrip.getText().toString(),Integer.parseInt(people.getText().toString()),Integer.parseInt(price.getText().toString()),0,0,time.getText().toString());
                 String id = databaseHosts.push().getKey();
                 databaseHosts.child(id).setValue(h);
-            }
-        });
-        //butt = (Button) findViewById(R.id.guest_button);
-        butt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
             }
         });
+        //butt = (Button) findViewById(R.id.guest_button);
+        
 
 //        location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
 //        if (location != null) {
