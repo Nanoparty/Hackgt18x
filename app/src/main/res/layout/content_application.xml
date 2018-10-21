@@ -8,165 +8,78 @@
     tools:context=".ApplicationActivity"
     tools:showIn="@layout/activity_application">
 
-
-
-    <!--Time-->
     <TextView
         android:id="@+id/time"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="400dp"
-        android:layout_marginRight="40dp"
-        android:layout_marginLeft="150dp"
-        android:paddingBottom="10dp"
-        android:text="Time of Event" />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="400dp"
-        android:layout_marginRight="80dp"
-        android:paddingBottom="10dp"
-        android:text="Time:" />
+        android:layout_width="117dp"
+        android:layout_height="27dp"
+        android:layout_alignEnd="@+id/address"
+        android:layout_alignStart="@+id/people"
+        android:layout_below="@+id/people"
+        android:layout_marginTop="17dp"
+        android:text="EventStartTime" />
 
-    <!--People Invited-->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="350dp"
-        android:layout_marginRight="80dp"
-        android:paddingBottom="10dp"
-        android:text="People Invited:" />
     <TextView
         android:id="@+id/people"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="350dp"
-        android:layout_marginRight="40dp"
-        android:layout_marginLeft="150dp"
-        android:paddingBottom="10dp"
-        android:text="Number of People" />
+        android:layout_width="117dp"
+        android:layout_height="27dp"
+        android:layout_alignStart="@+id/address"
+        android:layout_below="@+id/price"
+        android:layout_marginTop="12dp"
+        android:text="MaxGuest" />
 
-    <!--Price-->
     <TextView
         android:id="@+id/price"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="300dp"
-        android:layout_marginRight="40dp"
-        android:layout_marginLeft="150dp"
-        android:paddingBottom="10dp"
+        android:layout_width="117dp"
+        android:layout_height="27dp"
+        android:layout_alignStart="@+id/catagory"
+        android:layout_below="@+id/catagory"
+        android:layout_marginTop="13dp"
         android:text="Price" />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="300dp"
-        android:layout_marginRight="80dp"
-        android:paddingBottom="10dp"
-        android:text="Price:"
-        />
 
-    <!--Name-->
     <TextView
         android:id="@+id/name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="250dp"
-        android:layout_marginRight="40dp"
-        android:layout_marginLeft="150dp"
-        android:paddingBottom="10dp"
-        android:text="Name" />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="250dp"
-        android:layout_marginRight="80dp"
-        android:paddingBottom="10dp"
-        android:text="Event Name:" />
+        android:layout_width="117dp"
+        android:layout_height="27dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/description"
+        android:layout_marginTop="31dp"
+        android:text="Food Party Event" />
 
-    <!--Category-->
     <TextView
         android:id="@+id/catagory"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="200dp"
-        android:layout_marginRight="40dp"
-        android:layout_marginLeft="150dp"
-        android:paddingBottom="10dp"
+        android:layout_width="117dp"
+        android:layout_height="27dp"
+        android:layout_alignStart="@+id/name"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="67dp"
         android:text="Category" />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="200dp"
-        android:layout_marginRight="80dp"
-        android:paddingBottom="10dp"
-        android:text="Category:" />
 
-    <!--Address-->
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="181dp"
+        android:layout_height="64dp"
+        android:layout_alignStart="@+id/address"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="226dp"
+        android:text="Description" />
+
     <TextView
         android:id="@+id/address"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="150dp"
-        android:layout_marginRight="40dp"
-        android:layout_marginLeft="150dp"
-        android:paddingBottom="10dp"
-        android:text="Address"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="181dp"
+        android:layout_height="64dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="150dp"
-        android:layout_marginRight="80dp"
-        android:paddingBottom="10dp"
-        android:text="Address:" />
-
-    <!--Description-->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="100dp"
-        android:layout_marginRight="80dp"
-        android:paddingBottom="10dp"
-        android:text="Description:" />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="100dp"
-        android:layout_marginRight="40dp"
-        android:layout_marginLeft="150dp"
-        android:paddingBottom="10dp"
-        android:text="Description" />
+        android:layout_marginBottom="142dp"
+        android:text="Address" />
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="10dp"
-        android:text="Apply"
-        android:layout_marginRight="50dp"
-        android:textColor="#ffff"
-        android:background="@drawable/rounded_button"/>
-
+        android:layout_marginBottom="63dp"
+        android:text="Apply" />
 </RelativeLayout>
