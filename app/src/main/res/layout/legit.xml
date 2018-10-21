@@ -7,13 +7,14 @@
     android:layout_height="match_parent"
     tools:context=".HostActivity1">
 
+
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/hostone_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#fff3e8"
-        android:paddingEnd="16dp"
+        android:background="#fff"
         android:paddingStart="1dp"
+        android:paddingEnd="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -21,102 +22,152 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0">
 
+        <ImageView
+            android:layout_width="148dp"
+            android:layout_height="210dp"
+            android:layout_above="@+id/host_event"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="52dp"
+            android:layout_marginEnd="-95dp"
+            android:layout_marginBottom="-111dp"
+            android:layout_toStartOf="@+id/textView"
+            android:src="@drawable/platelogo" />
+
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="56dp"
+            android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_alignStart="@+id/host_address"
-            android:layout_marginStart="71dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="105dp"
             android:layout_marginTop="31dp"
-            android:text="Create Event"
+            android:layout_marginEnd="162dp"
+            android:text="Create"
             android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="178dp"
+            android:layout_height="56dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="209dp"
+            android:layout_marginTop="31dp"
+            android:layout_marginEnd="47dp"
+            android:text="Event"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="#FF8F00" />
 
         <Button
             android:id="@+id/host_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
             android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
             android:layout_marginBottom="7dp"
-            android:layout_marginStart="13dp"
             android:background="@drawable/rounded_button"
+            android:paddingBottom="10dp"
             android:text="Submit"
             android:textColor="#ffff"
-            android:textSize="16dp"/>
+            android:textSize="16dp" />
 
         <EditText
             android:id="@+id/host_event"
-            android:layout_width="392dp"
+            android:layout_width="328dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginEnd="0dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="30dp"
             android:layout_marginTop="99dp"
+            android:layout_marginEnd="30dp"
             android:autofillHints=""
             android:ems="10"
-            android:hint="Food Party Event"
+            android:hint="Event Name"
             android:inputType="" />
 
         <EditText
             android:id="@+id/host_category"
             android:layout_width="410dp"
             android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_alignStart="@+id/host_event"
-            android:layout_marginStart="-3dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="30dp"
             android:layout_marginTop="149dp"
+            android:layout_marginEnd="30dp"
             android:ems="10"
-            android:hint="Category (American, Mexican ...)" />
+            android:hint="Category" />
 
         <EditText
             android:id="@+id/host_description"
-            android:layout_width="389dp"
-            android:layout_height="60dp"
-            android:layout_alignStart="@+id/time"
+            android:layout_width="325dp"
+            android:layout_height="80dp"
             android:layout_below="@+id/time"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="76dp"
+            android:layout_marginEnd="30dp"
             android:ems="10"
             android:hint="Description"
             android:inputType="textMultiLine" />
 
         <EditText
             android:id="@+id/host_address"
-            android:layout_width="372dp"
-            android:layout_height="60dp"
-            android:layout_alignStart="@+id/host_description"
-            android:layout_below="@+id/host_description"
-            android:layout_marginTop="19dp"
+            android:layout_width="321dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/people"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginEnd="30dp"
             android:ems="10"
             android:hint="Address"
             android:inputType="textPostalAddress" />
 
         <EditText
             android:id="@+id/time"
-            android:layout_width="wrap_content"
+            android:layout_width="321dp"
             android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/price"
             android:layout_below="@+id/people"
-            android:layout_marginTop="18dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="30dp"
             android:ems="10"
-            android:hint="Event Start Time"
+            android:hint="Start Time"
             android:inputType="time" />
 
         <EditText
             android:id="@+id/price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/host_category"
             android:layout_below="@+id/host_category"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
             android:ems="10"
-            android:hint="Price of Event"
+            android:hint="Price"
             android:inputType="number" />
 
         <EditText
             android:id="@+id/people"
-            android:layout_width="wrap_content"
+            android:layout_width="322dp"
             android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/host_description"
             android:layout_below="@+id/price"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="30dp"
             android:ems="10"
             android:hint="Max Guests"
             android:inputType="number" />
