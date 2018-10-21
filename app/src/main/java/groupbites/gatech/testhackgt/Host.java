@@ -10,6 +10,7 @@ import java.util.ArrayList;
 public class Host {
     static ArrayList<Host> hostList = new ArrayList<>();
     static String selectedName = "";
+    private String image;
     private String Location; //ADDRESS
     private String Name;   //NAME OF EVENT
     private String Cuisine; //TYPE
@@ -40,7 +41,7 @@ public class Host {
     public Host(){
 
     }
-
+    public String getImage() { return image; }
     public String getLocation(){
         return Location;
     }
@@ -105,6 +106,6 @@ public class Host {
     public void setPending(){status = "Pending";}
     public void setRejected(){status = "Rejected";}
     public void setAccepted(){status = "Accepted";}
-
+    public void setImage(String image) { this.image = image;}
 
 }
