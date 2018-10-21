@@ -1,12 +1,16 @@
 package groupbites.gatech.testhackgt;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -47,7 +51,7 @@ public class GuestActivity extends AppCompatActivity {
 
         HashMap<String, String> nameAddresses = new HashMap<>();
         for(Host h: Host.hostList){
-            nameAddresses.put(h.getName()+" $" + h.getCuisine(), h.getLocation()+"");
+            nameAddresses.put(h.getName()+" $" + h.getPrice(), h.getLocation()+"");
         }
 //        nameAddresses.put("Diana", "3214 Broadway Avenue");
 //        nameAddresses.put("Tyga", "343 Rack City Drive");
@@ -59,7 +63,7 @@ public class GuestActivity extends AppCompatActivity {
         List<HashMap<String, String>> listItems = new ArrayList<>();
         SimpleAdapter adapter = new SimpleAdapter(this, listItems, R.layout.list_item,
                 new String[]{"First Line", "Second Line"},
-                new int[]{R.id.text1, R.id.text2});
+                new int[]{R.id.title, R.id.text2});
 
 
         Iterator it = nameAddresses.entrySet().iterator();
@@ -74,12 +78,24 @@ public class GuestActivity extends AppCompatActivity {
 
         listView.setAdapter(adapter);
 
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                // selected item
+                String selected = ((TextView) view.findViewById(R.id.title)).getText().toString();
+
+                Toast toast = Toast.makeText(getApplicationContext(), selected, Toast.LENGTH_SHORT);
+                toast.show();
+
+                Host.selectedName = selected;
+                Intent intent = new Intent(getApplicationContext(), ApplicationActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
 
 
 
-        hostList = new ArrayList<>();
 
 
 

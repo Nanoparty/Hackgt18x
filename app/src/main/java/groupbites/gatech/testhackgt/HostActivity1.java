@@ -72,7 +72,7 @@ public class HostActivity1 extends AppCompatActivity {
             }
         });
         //butt = (Button) findViewById(R.id.guest_button);
-        
+
 
 //        location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
 //        if (location != null) {

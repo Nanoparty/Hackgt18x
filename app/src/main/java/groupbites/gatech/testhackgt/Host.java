@@ -9,6 +9,7 @@ import java.util.ArrayList;
 
 public class Host {
     static ArrayList<Host> hostList = new ArrayList<>();
+    static String selectedName = "";
     private String Location; //ADDRESS
     private String Name;   //NAME OF EVENT
     private String Cuisine; //TYPE
@@ -18,6 +19,8 @@ public class Host {
     private double lattitute;
     private double longitude;
     private String EventTime;
+    private int currentPeople;
+    private int pendingPeople;
 
     public Host(String loc, String name, String cuis, String desc, int mg, int price, double lat, double lon, String time){
         Location = loc;
