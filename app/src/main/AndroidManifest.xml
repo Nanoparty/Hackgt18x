@@ -27,7 +27,8 @@
         <activity
             android:name=".HostManagerActivity"
             android:label="@string/title_activity_host_manager"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
+        <activity android:name=".PendingActivity"></activity>
     </application>
 
 </manifest>
