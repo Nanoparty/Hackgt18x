@@ -60,13 +60,10 @@ public class ApplicationActivity extends AppCompatActivity {
         apply.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(host.getCurrentPeople()>= host.getMaxGuests()){
-                    Toast toast = Toast.makeText(getApplicationContext(), "Event already full", Toast.LENGTH_SHORT);
-                    toast.show();
-                }else if(host.getStatus().equals("Available")){
+
                     host.setPendingPeople(host.getPendingPeople()+1);
                     host.setPending();
-                }
+
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
             }
