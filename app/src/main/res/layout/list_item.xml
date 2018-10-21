@@ -9,14 +9,14 @@
         android:layout_height="wrap_content"
         android:textColor="@android:color/holo_orange_dark"
         android:textSize="21sp"
-        android:textStyle="bold" />
+         />
 
     <TextView android:id="@+id/text2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="16sp"
-        android:textColor="@android:color/holo_orange_light"
-        android:textStyle="bold"
+        android:textColor="#38393a"
+
         />
 
 
