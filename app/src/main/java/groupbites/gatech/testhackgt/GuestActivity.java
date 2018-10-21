@@ -26,7 +26,7 @@ import java.util.Map;
 
 public class GuestActivity extends AppCompatActivity {
 
-    //你好吗？
+
     ArrayList<Host> hostList;
     ListView listView;
     List list = new ArrayList<>();

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/host_activity_constraintID"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HostActivity1">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/hostone_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff3e8"
+        android:paddingStart="1dp"
+        android:paddingEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <Button
+            android:id="@+id/host_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="13dp"
+            android:layout_marginBottom="7dp"
+            android:background="#FFE5B4"
+            android:text="@string/hostone_cont"
+            android:textColor="#696969" />
+
+        <EditText
+            android:id="@+id/host_event"
+            android:layout_width="392dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="99dp"
+            android:layout_marginEnd="0dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="Food Party Event"
+            android:inputType="" />
+
+        <EditText
+            android:id="@+id/host_category"
+            android:layout_width="410dp"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/host_event"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="-3dp"
+            android:layout_marginTop="149dp"
+            android:ems="10"
+            android:hint="Category (American, Mexican ...)" />
+
+        <EditText
+            android:id="@+id/host_description"
+            android:layout_width="389dp"
+            android:layout_height="105dp"
+            android:layout_alignStart="@+id/host_category"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="346dp"
+            android:ems="10"
+            android:hint="Description"
+            android:inputType="textMultiLine" />
+
+        <SeekBar
+            android:id="@+id/price"
+            android:layout_width="299dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="47dp"
+            android:layout_marginTop="218dp"
+            android:max="20" />
+
+        <SeekBar
+            android:id="@+id/people"
+            android:layout_width="299dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="265dp"
+            android:max="5" />
+
+        <EditText
+            android:id="@+id/host_address"
+            android:layout_width="372dp"
+            android:layout_height="95dp"
+            android:layout_alignStart="@+id/host_button"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="104dp"
+            android:ems="10"
+            android:hint="Address"
+            android:inputType="textPostalAddress" />
+
+        <TextClock
+            android:id="@+id/textClock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/host_address"
+            android:layout_alignStart="@+id/people"
+            android:layout_marginBottom="25dp"
+            android:layout_marginStart="122dp" />
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
