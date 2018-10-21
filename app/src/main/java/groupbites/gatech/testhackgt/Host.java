@@ -19,8 +19,8 @@ public class Host {
     private double lattitute;
     private double longitude;
     private String EventTime;
-    private int currentPeople = 0;
-    private int pendingPeople = 0;
+    private int currentPeople;
+    private int pendingPeople;
     private int state;
     private String status = "Available";
 

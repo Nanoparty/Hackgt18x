@@ -63,7 +63,7 @@ public class ApplicationActivity extends AppCompatActivity {
                 if(host.getCurrentPeople()>= host.getMaxGuests()){
                     Toast toast = Toast.makeText(getApplicationContext(), "Event already full", Toast.LENGTH_SHORT);
                     toast.show();
-                }else{
+                }else if(host.getStatus().equals("Available")){
                     host.setPendingPeople(host.getPendingPeople()+1);
                     host.setPending();
                 }

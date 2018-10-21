@@ -72,8 +72,8 @@ public class HostManagerActivity extends AppCompatActivity {
                 toast.show();
 
                 Host.selectedName = selected;
-                Intent intent = new Intent(getApplicationContext(), PendingActivity.class);
-                startActivity(intent);
+                Intent intent = new Intent(getApplicationContext(), ApplicationActivity.class);
+                //startActivity(intent);
             }
         });
 
