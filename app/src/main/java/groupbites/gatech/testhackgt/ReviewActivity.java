@@ -1,11 +1,10 @@
 package groupbites.gatech.testhackgt;
 
+import android.content.DialogInterface;
 import android.content.Intent;
-import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -21,38 +20,36 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
-public class HostManagerActivity extends AppCompatActivity {
+public class ReviewActivity extends AppCompatActivity {
 
     ArrayList<Host> hostList;
     ListView listView;
     List list = new ArrayList<>();
     ArrayAdapter adapter;
-    Button butt;
+    Host host;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_host_manager);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        setContentView(R.layout.activity_review);
 
-        butt = (Button) findViewById(R.id.newbutt);
-        butt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), HostActivity1.class);
-                startActivity(intent);
+        String search = Host.selectedName;
+
+        host = null;
+        for(Host h:Host.hostList){
+            if(h.getName().toString().equals(search)){
+
+                host = h;
             }
-        });
-
-
+        }
 
         listView = (ListView) findViewById(R.id.list1);
 
         HashMap<String, String> nameAddresses = new HashMap<>();
-        for(Host h: Host.hostList){
-            nameAddresses.put(h.getName()+" ", "Pending Applications:"+h.getPendingPeople()  );
-        }
+
+            nameAddresses.put("George P Burdell", "Rating: 100%");
+
 
         List<HashMap<String, String>> listItems = new ArrayList<>();
         SimpleAdapter adapter = new SimpleAdapter(this, listItems, R.layout.list_item,
@@ -81,11 +78,32 @@ public class HostManagerActivity extends AppCompatActivity {
                 //toast.show();
 
                 Host.selectedName = selected;
-                Intent intent = new Intent(getApplicationContext(), ReviewActivity.class);
-                startActivity(intent);
+                Intent intent = new Intent(getApplicationContext(), ApplicationActivity.class);
+                //startActivity(intent);
+
+                AlertDialog.Builder altdial = new AlertDialog.Builder(ReviewActivity.this);
+                altdial.setMessage("Do you want to Approve this user?").setCancelable(false)
+                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                //host.setAccepted();
+                                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                                startActivity(intent);
+                            }
+                        })
+                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                //host.setRejected();
+                                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                                startActivity(intent);
+                            }
+                        });
+
+                AlertDialog alert = altdial.create();
+                alert.setTitle("Dialog Header");
+                alert.show();
             }
         });
-
     }
-
 }
