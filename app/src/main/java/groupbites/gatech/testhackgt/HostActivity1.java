@@ -69,6 +69,14 @@ public class HostActivity1 extends AppCompatActivity {
                 databaseHosts.child(id).setValue(h);
             }
         });
+        //butt = (Button) findViewById(R.id.guest_button);
+        butt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+            }
+        });
 
 //        location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
 //        if (location != null) {
