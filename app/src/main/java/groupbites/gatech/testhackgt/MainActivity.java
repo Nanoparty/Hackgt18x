@@ -17,6 +17,7 @@ import com.google.firebase.database.ValueEventListener;
 public class MainActivity extends AppCompatActivity {
 
     TextView text;
+    TextView hello;
 
     private Button guestButton;
     private Button hostButton;
