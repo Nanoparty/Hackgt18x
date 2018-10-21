@@ -15,7 +15,7 @@
         android:layout_alignParentEnd="true"
         android:layout_marginTop="-1dp"
         android:layout_marginEnd="275dp"
-        android:src="@drawable/logoEvent" />
+        android:src="@drawable/logooo" />
 
     <!--Name-->
     <TextView
