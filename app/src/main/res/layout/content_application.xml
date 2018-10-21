@@ -8,25 +8,57 @@
     tools:context=".ApplicationActivity"
     tools:showIn="@layout/activity_application">
 
+    <!--Name-->
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button2"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="127dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="354dp"
+        android:paddingBottom="10dp"
+        android:text="Name" />
+
+    <TextView
+        android:id="@+id/nameasdf"
+        android:layout_width="316dp"
+        android:layout_height="28dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="128dp"
+        android:layout_marginRight="80dp"
+        android:layout_marginBottom="411dp"
+        android:paddingBottom="10dp"
+        android:text="Event Name:" />
+
     <!--Time of Event-->
     <TextView
         android:id="@+id/time"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="400dp"
-        android:layout_marginRight="40dp"
+        android:layout_above="@+id/button2"
+        android:layout_alignParentTop="true"
         android:layout_marginLeft="150dp"
+        android:layout_marginTop="179dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="302dp"
         android:paddingBottom="10dp"
-        android:text="Time of Event" />
+        android:text="Time" />
+
     <TextView
         android:id="@+id/timeasdf"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="316dp"
+        android:layout_height="28dp"
+        android:layout_alignParentTop="true"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="400dp"
+        android:layout_marginTop="179dp"
         android:layout_marginRight="80dp"
+        android:layout_marginBottom="360dp"
         android:paddingBottom="10dp"
         android:text="Time:" />
 
@@ -35,133 +67,137 @@
         android:id="@+id/price"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="300dp"
-        android:layout_marginRight="40dp"
+        android:layout_above="@+id/button2"
+        android:layout_alignParentTop="true"
         android:layout_marginLeft="150dp"
+        android:layout_marginTop="237dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="244dp"
         android:paddingBottom="10dp"
         android:text="Price" />
+
     <TextView
         android:id="@+id/priceasdf"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="316dp"
+        android:layout_height="28dp"
+        android:layout_alignParentTop="true"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="300dp"
+        android:layout_marginTop="237dp"
         android:layout_marginRight="80dp"
+        android:layout_marginBottom="302dp"
         android:paddingBottom="10dp"
-        android:text="Price:"/>
+        android:text="Price:" />
 
     <!--People Invited-->
     <TextView
         android:id="@+id/people"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="350dp"
-        android:layout_marginRight="80dp"
+        android:layout_above="@+id/button2"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="280dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="201dp"
         android:paddingBottom="10dp"
-        android:text="People Invited:"
-         />
+        android:text="People Invited" />
+
     <TextView
         android:id="@+id/peopleasdf"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="316dp"
+        android:layout_height="28dp"
+        android:layout_alignParentTop="true"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="350dp"
+        android:layout_marginTop="281dp"
         android:layout_marginRight="80dp"
+        android:layout_marginBottom="258dp"
         android:paddingBottom="10dp"
-        android:text="People Invited:" />
+        android:text="Guests:" />
 
-    <!--Name-->
-    <TextView
-        android:id="@+id/name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="250dp"
-        android:layout_marginRight="40dp"
-        android:layout_marginLeft="150dp"
-        android:paddingBottom="10dp"
-        android:text="Name" />
-    <TextView
-        android:id="@+id/nameasdf"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="250dp"
-        android:layout_marginRight="80dp"
-        android:paddingBottom="10dp"
-        android:text="Event Name:" />
 
     <!--Category-->
     <TextView
         android:id="@+id/catagory"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="200dp"
-        android:layout_marginRight="40dp"
+        android:layout_above="@+id/button2"
+        android:layout_alignParentTop="true"
         android:layout_marginLeft="150dp"
+        android:layout_marginTop="330dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="151dp"
         android:paddingBottom="10dp"
         android:text="Category" />
+
     <TextView
         android:id="@+id/catagoryasdf"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="316dp"
+        android:layout_height="28dp"
+        android:layout_alignParentTop="true"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="200dp"
+        android:layout_marginTop="329dp"
         android:layout_marginRight="80dp"
+        android:layout_marginBottom="210dp"
         android:paddingBottom="10dp"
         android:text="Category:" /> />
-
-    <!--Description-->
-    <TextView
-        android:id="@+id/description"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="100dp"
-        android:layout_marginRight="80dp"
-        android:paddingBottom="10dp"
-        android:text="Description:" />
-    <TextView
-        android:id="@+id/descriptionasdf"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="100dp"
-        android:layout_marginRight="40dp"
-        android:layout_marginLeft="150dp"
-        android:paddingBottom="10dp"
-        android:text="Description" />
 
     <!--Address-->
     <TextView
         android:id="@+id/address"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="150dp"
-        android:layout_marginRight="40dp"
+        android:layout_above="@+id/button2"
+        android:layout_alignParentTop="true"
         android:layout_marginLeft="150dp"
+        android:layout_marginTop="373dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="108dp"
         android:paddingBottom="10dp"
-        android:text="Address"/>
+        android:text="Address" />
+
     <TextView
         android:id="@+id/addressasdf"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="316dp"
+        android:layout_height="28dp"
+        android:layout_alignParentTop="true"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="150dp"
+        android:layout_marginTop="374dp"
         android:layout_marginRight="80dp"
+        android:layout_marginBottom="165dp"
         android:paddingBottom="10dp"
         android:text="Address:" />
+
+
+    <!--Description-->
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button2"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="425dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="56dp"
+        android:paddingBottom="10dp"
+        android:text="Description" />
+
+    <TextView
+        android:id="@+id/descriptionasdf"
+        android:layout_width="316dp"
+        android:layout_height="28dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="425dp"
+        android:layout_marginRight="80dp"
+        android:layout_marginBottom="114dp"
+        android:paddingBottom="10dp"
+        android:text="Description:" />
 
     <Button
         android:id="@+id/button2"
@@ -174,5 +210,17 @@
         android:layout_marginRight="50dp"
         android:textColor="#ffff"
         android:background="@drawable/rounded_button"/>
+
+    <TextView
+        android:id="@+id/Activity_Title"
+        android:layout_width="303dp"
+        android:layout_height="54dp"
+        android:layout_alignStart="@+id/peopleasdf"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="41dp"
+        android:text="Events"
+        android:textAlignment="center"
+        android:textSize="35dp" />
 
 </RelativeLayout>
