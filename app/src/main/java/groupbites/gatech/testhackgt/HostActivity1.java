@@ -8,15 +8,19 @@ import android.location.LocationListener;
 import android.location.LocationManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.format.Time;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import org.w3c.dom.Text;
 
-import java.sql.Time;
+
 
 public class HostActivity1 extends AppCompatActivity {
 
@@ -25,10 +29,11 @@ public class HostActivity1 extends AppCompatActivity {
     TextView descrip;
     TextView name;
     TextView catagory;
-    SeekBar price;
-    SeekBar people;
-    Time time;
-    Address address;
+    TextView price;
+    TextView people;
+    TextView time;
+    TextView address;
+    DatabaseReference databaseHosts;
 
 
 
@@ -47,10 +52,21 @@ public class HostActivity1 extends AppCompatActivity {
         descrip = (TextView) findViewById(R.id.host_description);
         name = (TextView) findViewById(R.id.host_event);
         catagory = (TextView) findViewById(R.id.host_category);
+        time = (TextView)findViewById(R.id.time);
+        address = (TextView) findViewById(R.id.host_address);
+        price = (TextView) findViewById(R.id.price);
+        people = (TextView) findViewById(R.id.people);
+
+        databaseHosts = FirebaseDatabase.getInstance().getReference("path");
+
+
+
         butt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Log.i(dish.getText().toString(), dish.getText().toString());
+                Host h = new Host(address.getText().toString(),name.getText().toString(),catagory.getText().toString(),descrip.getText().toString(),Integer.parseInt(people.getText().toString()),Integer.parseInt(price.getText().toString()),0,0,time.getText().toString());
+                String id = databaseHosts.push().getKey();
+                databaseHosts.child(id).setValue(h);
             }
         });
 

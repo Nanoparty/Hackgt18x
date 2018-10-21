@@ -12,14 +12,14 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#fff3e8"
-        android:paddingStart="1dp"
         android:paddingEnd="16dp"
+        android:paddingStart="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintVertical_bias="1.0">
 
         <Button
             android:id="@+id/host_button"
@@ -37,10 +37,10 @@
             android:id="@+id/host_event"
             android:layout_width="392dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="99dp"
+            android:layout_alignParentTop="true"
             android:layout_marginEnd="0dp"
+            android:layout_marginTop="99dp"
             android:autofillHints=""
             android:ems="10"
             android:hint="Food Party Event"
@@ -50,8 +50,8 @@
             android:id="@+id/host_category"
             android:layout_width="410dp"
             android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/host_event"
             android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/host_event"
             android:layout_marginStart="-3dp"
             android:layout_marginTop="149dp"
             android:ems="10"
@@ -61,8 +61,8 @@
             android:id="@+id/host_description"
             android:layout_width="389dp"
             android:layout_height="105dp"
-            android:layout_alignStart="@+id/host_category"
             android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/host_category"
             android:layout_marginStart="4dp"
             android:layout_marginTop="346dp"
             android:ems="10"
@@ -73,41 +73,20 @@
             android:id="@+id/host_address"
             android:layout_width="372dp"
             android:layout_height="95dp"
-            android:layout_alignStart="@+id/host_button"
             android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/host_button"
             android:layout_marginBottom="104dp"
             android:ems="10"
             android:hint="Address"
             android:inputType="textPostalAddress" />
 
         <EditText
-            android:id="@+id/editText"
+            android:id="@+id/time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignStart="@+id/host_description"
-            android:layout_below="@+id/host_category"
-            android:ems="10"
-            android:hint="Price"
-            android:inputType="textPersonName" />
-
-        <EditText
-            android:id="@+id/editText2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
+            android:layout_above="@+id/host_address"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/editText"
-            android:ems="10"
-            android:hint="Max Guests"
-            android:inputType="textPersonName" />
-
-        <EditText
-            android:id="@+id/editText3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/host_category"
-            android:layout_below="@+id/editText2"
+            android:layout_marginBottom="21dp"
             android:ems="10"
             android:hint="Event Start Time"
             android:inputType="time" />
@@ -122,6 +101,26 @@
             android:layout_marginTop="31dp"
             android:text="Create Event"
             android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+        <EditText
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/host_category"
+            android:layout_below="@+id/host_category"
+            android:ems="10"
+            android:hint="Price of Event"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/people"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/host_description"
+            android:layout_below="@+id/price"
+            android:ems="10"
+            android:hint="Max Guests"
+            android:inputType="number" />
 
     </RelativeLayout>
 

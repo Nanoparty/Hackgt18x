@@ -17,9 +17,9 @@ public class Host {
     private int Price;
     private double lattitute;
     private double longitude;
-    private Time EventTime;
+    private String EventTime;
 
-    public Host(String loc, String name, String cuis, String desc, int mg, int price, double lat, double lon, Time time){
+    public Host(String loc, String name, String cuis, String desc, int mg, int price, double lat, double lon, String time){
         Location = loc;
         Name = name;
         Cuisine = cuis;
@@ -59,7 +59,7 @@ public class Host {
     public double getLongitude(){
         return longitude;
     }
-    public Time getEventTime(){
+    public String getEventTime(){
         return EventTime;
     }
 
@@ -87,7 +87,7 @@ public class Host {
     public void setLongitude(double d){
         longitude = d;
     }
-    public void setEventTime(Time t){
+    public void setEventTime(String t){
         EventTime = t;
     }
 
