@@ -120,7 +120,7 @@ public class ReviewActivity extends AppCompatActivity {
                         });
 
                 AlertDialog alert = altdial.create();
-                alert.setTitle("Dialog Header");
+                alert.setTitle("Application Approval");
                 alert.show();
             }
         });
