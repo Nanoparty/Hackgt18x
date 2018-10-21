@@ -23,8 +23,19 @@ public class ApplicationActivity extends AppCompatActivity {
                 index = i;
         }
         search = search.substring(0,index-1);
+        Host current = null;
+
+        for(Host h: Host.hostList){
+            if(h.getName().toString().equals(search)){
+                current = h;
+            }else{
+
+            }
+        }
 
         
+
+
 
 
 //        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
