@@ -36,6 +36,15 @@ public class HostManagerActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        butt = (Button) findViewById(R.id.newbutt);
+        butt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), HostActivity1.class);
+                startActivity(intent);
+            }
+        });
+
 
 
         listView = (ListView) findViewById(R.id.list1);
