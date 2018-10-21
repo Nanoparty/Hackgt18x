@@ -59,7 +59,7 @@ public class ReviewActivity extends AppCompatActivity {
 
         HashMap<String, String> nameAddresses = new HashMap<>();
         for(int i = 0; i < host.getPendingPeople();i++){
-            nameAddresses.put("George P Burdell", "Rating: 100%");
+            nameAddresses.put("George P Burdell" + i, "Rating: 100%");
         }
 
 
