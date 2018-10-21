@@ -10,4 +10,5 @@
     <string name="event_name">event_name</string>
     <string name="description">Description</string>
     <string name="title_activity_application">ApplicationActivity</string>
+    <string name="title_activity_host_manager">HostManagerActivity</string>
 </resources>

@@ -67,7 +67,7 @@ public class ApplicationActivity extends AppCompatActivity {
                     host.setPendingPeople(host.getPendingPeople()+1);
                     host.setPending();
                 }
-                Intent intent = new Intent(getApplicationContext(), GuestActivity.class);
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
             }
         });
