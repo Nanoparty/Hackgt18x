@@ -21,6 +21,17 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0">
 
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/host_address"
+            android:layout_marginStart="71dp"
+            android:layout_marginTop="31dp"
+            android:text="Create Event"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
         <Button
             android:id="@+id/host_button"
             android:layout_width="match_parent"
@@ -91,17 +102,6 @@
             android:ems="10"
             android:hint="Event Start Time"
             android:inputType="time" />
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignStart="@+id/host_address"
-            android:layout_marginStart="71dp"
-            android:layout_marginTop="31dp"
-            android:text="Create Event"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
         <EditText
             android:id="@+id/price"
