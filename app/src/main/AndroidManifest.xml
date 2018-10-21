@@ -23,10 +23,6 @@
         <activity
             android:name=".ApplicationActivity"
             android:label="@string/title_activity_application"
-            android:theme="@style/AppTheme" />
-        <activity
-            android:name=".HostManagerActivity"
-            android:label="@string/title_activity_host_manager"
             android:theme="@style/AppTheme"></activity>
     </application>
 

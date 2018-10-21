@@ -20,37 +20,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/boy"
-        android:layout_width="87dp"
-        android:layout_height="93dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="364dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:src="@drawable/friendship"
-        app:layout_constraintBottom_toBottomOf="@+id/guest_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.684" />
-
-    <ImageView
-        android:id="@+id/chef"
-        android:layout_width="87dp"
-        android:layout_height="93dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="220dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:src="@drawable/chef"
-        app:layout_constraintBottom_toBottomOf="@+id/host_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
-
-    <ImageView
         android:id="@+id/slogan"
         android:layout_width="337dp"
         android:layout_height="43dp"
@@ -75,11 +44,10 @@
         android:textSize="18dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/slogan"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.456" />
+        app:layout_constraintVertical_bias="0.156" />
 
     <Button
         android:id="@+id/host_button"
@@ -94,11 +62,10 @@
         android:textSize="18dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guest_button"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5"
-        app:layout_constraintVertical_bias="0.491" />
+        app:layout_constraintVertical_bias="0.579" />
 
     <TextView
         android:id="@+id/textView5"
