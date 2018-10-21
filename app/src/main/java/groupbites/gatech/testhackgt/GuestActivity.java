@@ -51,7 +51,7 @@ public class GuestActivity extends AppCompatActivity {
 
         HashMap<String, String> nameAddresses = new HashMap<>();
         for(Host h: Host.hostList){
-            nameAddresses.put(h.getName()+" $" + h.getPrice(), h.getLocation()+"");
+            nameAddresses.put(h.getName()+" $" + h.getPrice(), "Status:"+h.getStatus() + " Dist: 1 mile" );
         }
 //        nameAddresses.put("Diana", "3214 Broadway Avenue");
 //        nameAddresses.put("Tyga", "343 Rack City Drive");
@@ -84,7 +84,7 @@ public class GuestActivity extends AppCompatActivity {
                 String selected = ((TextView) view.findViewById(R.id.title)).getText().toString();
 
                 Toast toast = Toast.makeText(getApplicationContext(), selected, Toast.LENGTH_SHORT);
-                toast.show();
+                //toast.show();
 
                 Host.selectedName = selected;
                 Intent intent = new Intent(getApplicationContext(), ApplicationActivity.class);
