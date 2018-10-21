@@ -51,7 +51,7 @@ public class HostManagerActivity extends AppCompatActivity {
 
         HashMap<String, String> nameAddresses = new HashMap<>();
         for(Host h: Host.hostList){
-            nameAddresses.put(h.getName()+" ", "Pending Applications:"+h.getPendingPeople()  );
+            nameAddresses.put(h.getName()+"", "Pending Applications:"+h.getPendingPeople()  );
         }
 
         List<HashMap<String, String>> listItems = new ArrayList<>();
@@ -78,7 +78,7 @@ public class HostManagerActivity extends AppCompatActivity {
                 String selected = ((TextView) view.findViewById(R.id.title)).getText().toString();
 
                 Toast toast = Toast.makeText(getApplicationContext(), selected, Toast.LENGTH_SHORT);
-                //toast.show();
+                toast.show();
 
                 Host.selectedName = selected;
                 Intent intent = new Intent(getApplicationContext(), ReviewActivity.class);

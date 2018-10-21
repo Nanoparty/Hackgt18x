@@ -14,6 +14,9 @@ import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -27,12 +30,15 @@ public class ReviewActivity extends AppCompatActivity {
     List list = new ArrayList<>();
     ArrayAdapter adapter;
     Host host;
+    DatabaseReference databaseHosts;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_review);
+
+        databaseHosts = FirebaseDatabase.getInstance().getReference("path");
 
         String search = Host.selectedName;
 
@@ -41,14 +47,21 @@ public class ReviewActivity extends AppCompatActivity {
             if(h.getName().toString().equals(search)){
 
                 host = h;
+
             }
         }
 
         listView = (ListView) findViewById(R.id.list1);
 
-        HashMap<String, String> nameAddresses = new HashMap<>();
 
+
+
+
+        HashMap<String, String> nameAddresses = new HashMap<>();
+        for(int i = 0; i < host.getPendingPeople();i++){
             nameAddresses.put("George P Burdell", "Rating: 100%");
+        }
+
 
 
         List<HashMap<String, String>> listItems = new ArrayList<>();
@@ -86,16 +99,22 @@ public class ReviewActivity extends AppCompatActivity {
                         .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                //host.setAccepted();
-                                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                                host.setAccepted();
+                                host.setPendingPeople(host.getPendingPeople()-1);
+                                String id = databaseHosts.push().getKey();
+                                databaseHosts.child(id).setValue(host);
+                                Intent intent = new Intent(getApplicationContext(), HostManagerActivity.class);
                                 startActivity(intent);
                             }
                         })
                         .setNegativeButton("No", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                //host.setRejected();
-                                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                                host.setRejected();
+                                host.setPendingPeople(host.getPendingPeople()-1);
+                                String id = databaseHosts.push().getKey();
+                                databaseHosts.child(id).setValue(host);
+                                Intent intent = new Intent(getApplicationContext(), HostManagerActivity.class);
                                 startActivity(intent);
                             }
                         });

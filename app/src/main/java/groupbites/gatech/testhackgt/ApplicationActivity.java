@@ -11,11 +11,16 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import org.w3c.dom.Text;
 
 public class ApplicationActivity extends AppCompatActivity {
 
     Host host;
+    int ind;
+    DatabaseReference databaseHosts;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +28,9 @@ public class ApplicationActivity extends AppCompatActivity {
         setContentView(R.layout.activity_application);
             Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        databaseHosts = FirebaseDatabase.getInstance().getReference("path");
+
 
         String search = Host.selectedName;
         int index=0;
@@ -32,10 +40,12 @@ public class ApplicationActivity extends AppCompatActivity {
         }
         search = search.substring(0,index-1);
         host = null;
-        for(Host h:Host.hostList){
-            if(h.getName().toString().equals(search)){
+        ind = 0;
+        for(int i = 0;i < Host.hostList.size();i++){
+            if(Host.hostList.get(i).getName().toString().equals(search)){
 
-                host = h;
+                host = Host.hostList.get(i);
+                ind = i;
             }
         }
 
@@ -63,6 +73,8 @@ public class ApplicationActivity extends AppCompatActivity {
 
                     host.setPendingPeople(host.getPendingPeople()+1);
                     host.setPending();
+                    String id = databaseHosts.push().getKey();
+                    databaseHosts.child(id).setValue(host);
 
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
