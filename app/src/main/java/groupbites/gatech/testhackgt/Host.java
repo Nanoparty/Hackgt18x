@@ -21,6 +21,8 @@ public class Host {
     private String EventTime;
     private int currentPeople;
     private int pendingPeople;
+    private int state;
+    private String status = "Available";
 
     public Host(String loc, String name, String cuis, String desc, int mg, int price, double lat, double lon, String time){
         Location = loc;
@@ -32,6 +34,7 @@ public class Host {
         lattitute = lat;
         longitude = lon;
         EventTime = time;
+        status = "Available";
     }
 
     public Host(){
@@ -65,6 +68,10 @@ public class Host {
     public String getEventTime(){
         return EventTime;
     }
+    public int getState(){return state;}
+    public int getCurrentPeople(){return currentPeople;}
+    public int getPendingPeople(){return pendingPeople;}
+    public String getStatus(){return status;}
 
     public void setName(String i){
         Name = i;
@@ -93,6 +100,11 @@ public class Host {
     public void setEventTime(String t){
         EventTime = t;
     }
+    public void setState(int i){state = i;}
+    public void setPendingPeople(int i){pendingPeople=i;}
+    public void setPending(){status = "Pending";}
+    public void setRejected(){status = "Rejected";}
+    public void setAccepted(){status = "Accepted";}
 
 
 }
