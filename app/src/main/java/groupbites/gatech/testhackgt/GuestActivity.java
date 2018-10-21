@@ -51,7 +51,7 @@ public class GuestActivity extends AppCompatActivity {
 
         HashMap<String, String> nameAddresses = new HashMap<>();
         for(Host h: Host.hostList){
-            nameAddresses.put(h.getName()+" $" + h.getPrice(), h.getLocation()+"");
+            nameAddresses.put(h.getName()+" $" + h.getPrice(), "Status:"+h.getStatus() + " Dist: 1 mile" );
         }
 //        nameAddresses.put("Diana", "3214 Broadway Avenue");
 //        nameAddresses.put("Tyga", "343 Rack City Drive");
