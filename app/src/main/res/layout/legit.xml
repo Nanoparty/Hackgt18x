@@ -21,6 +21,17 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0">
 
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/host_address"
+            android:layout_marginStart="71dp"
+            android:layout_marginTop="31dp"
+            android:text="Create Event"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
         <Button
             android:id="@+id/host_button"
             android:layout_width="match_parent"
@@ -29,9 +40,10 @@
             android:layout_alignParentStart="true"
             android:layout_marginBottom="7dp"
             android:layout_marginStart="13dp"
-            android:background="#FFE5B4"
+            android:background="@drawable/rounded_button"
             android:text="Submit"
-            android:textColor="#696969" />
+            android:textColor="#ffff"
+            android:textSize="16dp"/>
 
         <EditText
             android:id="@+id/host_event"
@@ -90,17 +102,6 @@
             android:ems="10"
             android:hint="Event Start Time"
             android:inputType="time" />
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignStart="@+id/host_address"
-            android:layout_marginStart="71dp"
-            android:layout_marginTop="31dp"
-            android:text="Create Event"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
         <EditText
             android:id="@+id/price"
